@@ -31,13 +31,13 @@ public class WalletService {
         if (amount > balance) {
             System.out.println("Balansinizda kifayet qeder mebleg yoxdur");
             return;
-        } else {
-            balance -= amount;
-            history[count] = description + " " + amount;
-            amounts[count] = -amount;
-            count++;
-            System.out.println("Balansinizdan " + amount + "AZN cixildi");
         }
+        balance -= amount;
+        history[count] = description + " " + amount;
+        amounts[count] = -amount;
+        count++;
+        System.out.println("Balansinizdan " + amount + "AZN cixildi");
+
     }
 
     public void printHistory() {
